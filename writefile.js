@@ -6,6 +6,7 @@ fs.writeFile('c:/js_stu/write.txt', content, err => {
         return
     }
     console.log("成功写入了")
+    
     console.log("vs code 会使用的话还是挺好用的！")
 }
 );
