@@ -8,6 +8,7 @@ fs.writeFile('c:/js_stu/write.txt', content, err => {
     console.log("成功写入了")
     
     console.log("vs code 会使用的话还是挺好用的！")
+    //这行会自动同步到github吗？
 }
 );
 
