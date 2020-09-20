@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol>
+        <li>我是谁1</li>
+        <li>我是谁1</li>
+        <li>我是谁1</li>
+        <li>我是谁1</li>
+        <li>我是谁1</li>
+        <li>我是谁1</li>
+        
+    </ol>
+
+    <ol>
+        <li>你是谁12</li>
+        <li>你是谁123</li>
+        <li>你是谁124</li>
+        <li>你是谁125</li>
+        <li>你是谁126</li>
+        <li>你是谁127</li>
+        
+    </ol>
+
+    <script>
+        // var lis = document.getElementsByTagName('li');
+        var ols = document.getElementsByTagName('ol');
+        var lis = ols[1].getElementsByTagName('li');
+
+       
+        // console.log(c);
+        // console.log(lis)
+        for (var i=1;i<lis.length;i++){
+            console.log(lis[i].innerHTML);
+        }
+
+        var allLi = document.querySelectorAll('li');
+        for(var i=1;i<allLi.length;i++){
+            console.log(allLi[i]);
+        }
+
+    </script>
+
+</body>
+</html>
