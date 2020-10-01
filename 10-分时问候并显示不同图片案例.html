@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="" alt="">
+    <div>上午好</div>
+
+<script>
+     var div = document.querySelector('div');
+
+     //2. 得到当前的小时数；
+     var date = new Date()
+     var h =date.getHours();
+
+     if (h>=12 && h<=18){
+         div.innerText="下午好";
+     }else if(h>18){
+         div.innerText="晚上好"
+
+     }
+
+</script>
+
+   
+</body>
+</html>

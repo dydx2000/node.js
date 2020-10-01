@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button >获取当前日期</button>
+    <input type="text" value="输入内容">
+
+    <script>
+        var btn = document.querySelector('button');
+        var input =document.querySelector('input');
+        btn.onclick=function(){
+
+            var date = new Date();
+            var year = date.getFullYear();
+            var mon = date.getMonth()+1;
+            var day = date.getDate();
+            var now = year+"-"+mon+"-"+ day;
+
+            input.value=now;
+            // btn.disabled="disabled";
+            // btn.disabled=true;
+            this.disabled=true;
+        }
+
+    </script>
+
+</body>
+</html>
