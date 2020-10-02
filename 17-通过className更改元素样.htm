@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height:200px;
+            background-color: pink;
+        }
+        .change{
+            background-color: powderblue;
+            margin-top: 50px;
+            color: red;
+            font-size: 20px;
+            text-align: center;
+            align-content: center;
+         
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div>
+            hello world!
+    </div>
+
+    <script>
+        var div = document.querySelector('div');
+
+        div.onmouseover=function(){
+            // this.style.backgroundColor='purple';
+            // this.style.color='#fff';
+            // this.style.fontSize="25px";
+            // this.style.marginTop='100px';
+            this.className="change";
+
+        }
+
+        div.onmouseleave=function(){
+            // this.style.backgroundColor='pink';
+            this.className=".change";
+            
+        }
+    </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            
+            width: 500px;
+        }
+        input{
+            color:#999;
+            
+            align-self: center;
+            
+        }
+
+    </style>
+
+</head>
+<body>
+    <div>
+
+        <input type="text" value="手机">
+
+    </div>
+
+    <script>
+        var text = document.querySelector('input');
+        text.onfocus=function(){
+            if (this.value=="手机"){
+                text.value="";
+
+            }
+            this.style.color="black";
+
+        }
+        text.onblur=function(){
+            if (this.value==""){
+                
+                text.value="手机";
+                
+            }
+            this.style.color="#999";
+        }
+
+    </script>
+</body>
+</html>
