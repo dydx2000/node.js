@@ -1,0 +1,134 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table{
+            width: 300px ;
+            margin: auto;
+            margin-top: 100px;
+        
+            border: 0;
+        }
+        thead tr{
+            background-color: steelblue;
+            color: white;
+           
+        }
+
+        tbody tr{
+            background-color:wheat;
+        }
+
+        tr{
+            height: 40px;
+         
+        }
+
+        td{
+            padding-left: 5px;
+        }
+        .change{
+            background-color: powderblue;
+        }
+
+    </style>
+</head>
+<body>
+    <table  >
+        <!-- 表头 -->
+        <thead>
+            <tr>
+                <th><input type="checkbox" id="allchecked"></th>
+                <th>商品</th>
+                <th>价钱</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>iPhone8</td>
+                <td>8000</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>iPad Pro</td>
+                <td>5000</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>iPad Air</td>
+                <td>2000</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Apple watch</td>
+                <td>2000</td>
+            </tr>
+        </tbody>
+
+
+    </table>
+
+    <script>
+
+        var allchecked = document.getElementById('allchecked');
+        var checkboxs = document.querySelector('tbody').querySelectorAll('input')
+        var trs = document.querySelector('tbody').querySelectorAll('tr')
+
+        //变色
+        for(var i=0;i<trs.length;i++){
+            trs[i].onmouseover=function(){
+                this.className='change';
+            }
+        }
+
+        for(var i=0;i<trs.length;i++){
+            trs[i].onmouseout=function(){
+                this.className='';
+            }
+        }
+
+        allchecked.onclick= function(){
+
+            if(allchecked.checked==true){
+                console.log(this.checked);
+                // console.log('checked');
+                for(var i=0;i<checkboxs.length;i++){                    
+                    // allcheckboxs[i].setAttribute('checked','checked');
+                    checkboxs[i].checked=true;
+                }
+                    
+
+            }
+            else{
+                // console.log('not checked');
+                console.log(this.checked);
+                for(var i=0;i<checkboxs.length;i++){                    
+                    // allcheckboxs[i].setAttribute("checked","checked");
+                    checkboxs[i].checked=false;
+                }
+            }
+        }
+
+        
+
+        for(var i=0;i<checkboxs.length;i++){
+            checkboxs[i].onclick= function(){
+                var flag=true;
+                for(var i=0;i<checkboxs.length;i++){
+                    if (!checkboxs[i].checked){
+                        flag=false;
+                        break;
+                        }
+                    }
+                    allchecked.checked=flag;
+                }                
+            }
+        
+    </script>
+
+</body>
+</html>

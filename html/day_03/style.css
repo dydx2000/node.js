@@ -1,0 +1,21 @@
+h3,h4 {
+    color:deeppink;
+    font-size: 30px;
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
+    border: powderblue;
+    border-style: solid;
+    width: 500px;
+   
+}
+h4 {
+    color:purple;
+    font-size: 30px;
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
+    border: powderblue;
+    border-style: solid;
+    width: 500px;
+}
