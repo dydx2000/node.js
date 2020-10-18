@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+ 
+    <title>Document</title>
+</head>
+<body>
+    <div>我是div</div>
+    <span></span>
+    <ul>
+        <li>我是LI</li>
+        <li>我是LI</li>
+        <li>我是LI</li>        
+    </ul>
+    <div class="box">
+        <span class="eerweima">x</span>
+    </div>
+    <script>
+        var erweima =document.querySelector('.eerweima')
+        console.log(erweima.parentNode);
+        
+        var ul = document.querySelector('ul');
+        var lis =ul.querySelectorAll('li');
+        console.log(ul.childNodes);
+
+        //2.children
+        console.log(ul.children);
+
+    </script>
+</body>
+</html>
