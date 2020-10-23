@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">唐伯虎</button> 
+    <div id="123">123</div> 
+    <script>
+        var btn = document.getElementById('btn');
+        btn.onmouseover=function() {
+            // alert("秋香")
+            btn.innerText="爱秋香"
+        }
+
+        var div =document.getElementById('123');
+        div.onclick= function(){
+            div.innerText="我被点了！";
+        }
+    </script>
+</body>
+</html>
