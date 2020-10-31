@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>知否知否，点我应有弹框在手！</li>
+        <li>知否知否，点我应有弹框在手！</li>
+        <li>知否知否，点我应有弹框在手！</li>
+        <li>知否知否，点我应有弹框在手！</li>
+        <li>知否知否，点我应有弹框在手！</li>
+    </ul>
+
+    <script>
+        document.addEventListener('contextmenu',function(e) {
+            e.preventDefault();
+            // alert('版权所有，禁止复制。')
+        })
+
+        document.addEventListener('selectstart',function(event) {
+            event.preventDefault();
+            console.log('禁用文本选择！');
+        })
+        var ul = document.querySelector('ul');
+        ul.addEventListener('click',function(event) {
+            // alert('知否知否，点我应有弹框在手！');
+            event.target.style.backgroundColor='pink';
+        })
+
+    </script>
+</body>
+
+    
+</html>

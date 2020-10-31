@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            float: left;
+            width: 200px;
+            height: 200px;
+            border: pink;
+            background-color: pink;
+        }
+        ul {
+            float: left;
+            border: solid 1px green;
+            margin-left: 50px;
+            padding: 5px;
+            background-color: rgb(134, 102, 134);
+        }
+        li {
+            list-style: none;
+            background-color: green;
+        }
+
+        a {
+            float: left;
+            margin-left: 50px;
+        }
+    </style>
+
+</head>
+<body>
+    <div>123</div>
+    <ul>
+        我是外层的UL
+        <li>我是LI123</li>
+        <li>我是LI456</li>
+        <li>我是LI789</li>
+        我也是外层的UL
+    </ul>
+
+    <a href="https://www.baidu.com">百度</a>
+
+    <script>
+        div =document.querySelector('div');
+        div.onclick = function(e) {
+            // console.log(e);
+            console.log(e.type);
+        }
+        div.onmouseover =function(e) {
+            console.log(e.type)
+        }
+        // div.addEventListener('click',function(event) {
+        //     console.log(event);
+        // })
+        var ul = document.querySelector('ul');
+        ul.addEventListener('click',function(e) {
+            console.log(this);
+            console.log(e.target);
+            console.log(e.type);
+        })
+
+        a=document.querySelector('a');
+        // a.addEventListener('click',function(e) {
+        //     console.log(e.type)
+        //     // e.preventDefault();  
+            
+        // } )
+
+        a.onclick =function(e) {
+            console.log(e.type);
+            return false;
+        }    
+
+
+    </script>
+</body>
+</html>
