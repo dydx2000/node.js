@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* *{
+            margin: 0px;
+            padding: 0px;
+        } */
+        li {
+            list-style: none;
+            background-color: pink;
+            width: 200px;
+            margin:5px 0px;
+        }
+        li a {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <button>发布</button>
+    <ul>       
+    </ul>
+    <script>
+        var textarea= document.querySelector('textarea')
+        var fabu = document.querySelector('button')
+        fabu.onclick=function(){
+            var text = textarea.value;
+            console.log(text);
+            var ul =document.querySelector('ul')
+            var li = document.createElement('li')
+            li.innerHTML=text+"<a href='javascript:;'>删除</a>";
+            ul.insertBefore(li,ul.children[0]);
+            dels = document.querySelectorAll('a');
+            for (var i=0;i<dels.length;i++){
+                dels[i].onclick = function(){
+                    //node.removeChild(child); 删除节点
+                    ul.removeChild(this.parentNode);                    
+                }
+            }
+            textarea.value="";
+
+        }
+    </script>
+</body>
+</html>

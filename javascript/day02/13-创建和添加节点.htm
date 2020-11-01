@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0px;
+        }
+        li {
+            list-style: none;
+        }
+        h1 {
+            color: lightpink;
+        }
+    </style>
+</head>
+<body>
+    <ul></ul>
+
+    <script>
+        var li = document.createElement('li');
+        var ul =document.querySelector('ul');
+        ul.appendChild(li);
+        li.innerText="hello world";
+        li.innerHTML="<h1>hello world<h1>"
+    </script>
+</body>
+</html>

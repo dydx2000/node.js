@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // document.addEventListener('keyup',function(e) {
+        //     console.log(e.key + ": " + e.keyCode);
+           
+           
+        // })
+        var text = ''    
+        document.addEventListener('keyup',function(e) {
+            console.log(e.key + ": " + e.keyCode);
+
+            var ekey = e.key;
+            if (e.keyCode == 13) {
+                ekey ='<br>';
+                // console.log(ekey)   
+            }
+            if (e.keyCode == 32) {
+                ekey ='&nbsp;'    
+            }
+
+            if (e.keyCode == 8) {
+                text = text.slice(0,text.length-1);
+                document.body.innerHTML=text;
+            }else if (e.keyCode == 18 || e.keyCode == 16) {
+                ekey=''
+                document.body.innerHTML=text;
+
+            }else{
+                text += ekey;
+                document.body.innerHTML=text;
+            }
+
+        })
+
+        
+    </script>
+</body>
+</html>
