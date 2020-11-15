@@ -7,9 +7,16 @@
 <body>
     <script>
 
-        window.setTimeout(function(){
-            window.alert("times")
+        var timer1=window.setTimeout(function(){
+            console.log('times up');
         },3000)
+
+        function callback(){
+            console.log("time out");
+        }
+
+        var timer2=window.setTimeout(callback,5000)
+       
     </script>
 </body>
 </html>
