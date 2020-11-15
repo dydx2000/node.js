@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var timer1=window.setTimeout(function(){
+            console.log('times up');
+        },3000)
+
+        function callback(){
+            console.log("time out");
+        }
+
+        var timer2=window.setTimeout(callback,5000)
+       
+    </script>
+</body>
+</html>
