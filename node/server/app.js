@@ -6,7 +6,7 @@ app.on('request', (req, res) => {
     res.writeHead(200, {
         'content-type': 'text/html;charset=utf8'
 
-
+        // 参数
     })
     res.end('<h2>hello wr </h2>');
     console.log(req.method);
