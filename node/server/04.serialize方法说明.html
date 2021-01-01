@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" id="form">
+        <input type="text" name='username'>
+        <input type="password" name="password">
+        <input type="submit" value="提交">
+    </form>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        // $('#form').on('submit', function() {
+        //     var params = $('form').serialize();
+        //     console.log(params);
+
+        //     return false;
+        // });
+        $('#form').on('submit', function() {
+            // var params = $('form').serialize();
+            // console.log(params);
+            serializeObject($(this));
+
+            return false;
+        });
+
+        function serializeObject(obj) {
+            var result = {};
+            var params = obj.serializeArray();
+
+            $.each(params, function(index, value) {
+                // console.log(index);
+                // console.log(value);
+                result[value.name] = value.value;
+            });
+            console.log(result);
+            return result;
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
